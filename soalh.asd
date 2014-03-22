@@ -7,7 +7,9 @@
   :license "MIT License"
   :depends-on ("split-sequence"
                "alexandria"
-               "usocket")
+               "usocket"
+               "cl-ppcre"
+               "bordeaux-threads")
   :components ((:file "package")
                (:file "conf")
                (:file "http")
