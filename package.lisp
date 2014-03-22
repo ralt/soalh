@@ -1,5 +1,5 @@
 ;;;; package.lisp
 
 (defpackage #:soalh
-  (:use #:cl))
-
+  (:use #:cl)
+  (:export :main))
