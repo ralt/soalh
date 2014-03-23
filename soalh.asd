@@ -12,5 +12,6 @@
                "bordeaux-threads")
   :components ((:file "package")
                (:file "conf")
-               (:file "http")
+               (:file "header")
+               (:file "socket")
                (:file "soalh")))

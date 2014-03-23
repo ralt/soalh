@@ -12,7 +12,7 @@
 
 (defun conf-line-valid (line)
   (let ((ret t))
-    (unless (eq (length line) 2)
+    (unless (eq (length line) 3)
       (setf ret nil))
     ret))
 
@@ -20,4 +20,5 @@
   (split-sequence:split-sequence #\Space line))
 
 (defun conf-line-add (line)
-  (setf (gethash (car line) *routes*) (cadr line)))
+  ;; (:route '(service-host service-port))
+  (setf (gethash (car line) *routes*) (list (cadr line) (parse-integer (caddr line)))))
